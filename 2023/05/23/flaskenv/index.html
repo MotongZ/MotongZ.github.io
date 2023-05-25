@@ -5,19 +5,19 @@
   
 
   
-  <title>internship_thought | MotongZ&#39;s Space</title><meta name="robots" content="noindex">
+  <title>我的第一个flask项目：部署和碰到的一些问题 | MotongZ&#39;s Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="第一次实习结束了，从2023-2-7到2023-3-17，这一个月经历了太多事情，给我简单的人生带来了许多的变数。经历了一个月的社会实践，我大概是明白了很多道理，同时我也应该学着反思自己的行为了。就像开篇博客所说，年轻也是有相对论的。选择大于努力这句b话还真不是盖的，考司马软院311点击就送，司马计院342直接寄。当然我考的确实垃圾也是事实，408真没学透，还没一些跨考仔来的高，也是让人无言以对">
+  <meta name="description" content="项目指引即日起30天内有效   Summary花了大约一周时间，跟着李辉老师的教程学习了flask项目，学习了一些基础的框架架构。项目详情请见https:&#x2F;&#x2F;github.com&#x2F;helloflask&#x2F;flask-tutorial，理性的说，这是个很不错而且全面的项目。项目学习过程中遇到了很多问题，显而易见的，这都是我python基础孱弱，并且毫无综合项目经验的缘故。本文欲简单介绍一下项目过程中碰">
 <meta property="og:type" content="article">
-<meta property="og:title" content="internship_thought">
-<meta property="og:url" content="https://motongz.github.io/2023/03/18/internship-thought/index.html">
+<meta property="og:title" content="我的第一个flask项目：部署和碰到的一些问题">
+<meta property="og:url" content="https://motongz.github.io/2023/05/23/flaskenv/index.html">
 <meta property="og:site_name" content="MotongZ&#39;s Space">
-<meta property="og:description" content="第一次实习结束了，从2023-2-7到2023-3-17，这一个月经历了太多事情，给我简单的人生带来了许多的变数。经历了一个月的社会实践，我大概是明白了很多道理，同时我也应该学着反思自己的行为了。就像开篇博客所说，年轻也是有相对论的。选择大于努力这句b话还真不是盖的，考司马软院311点击就送，司马计院342直接寄。当然我考的确实垃圾也是事实，408真没学透，还没一些跨考仔来的高，也是让人无言以对">
+<meta property="og:description" content="项目指引即日起30天内有效   Summary花了大约一周时间，跟着李辉老师的教程学习了flask项目，学习了一些基础的框架架构。项目详情请见https:&#x2F;&#x2F;github.com&#x2F;helloflask&#x2F;flask-tutorial，理性的说，这是个很不错而且全面的项目。项目学习过程中遇到了很多问题，显而易见的，这都是我python基础孱弱，并且毫无综合项目经验的缘故。本文欲简单介绍一下项目过程中碰">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-18T14:55:18.000Z">
-<meta property="article:modified_time" content="2023-03-18T15:37:22.507Z">
+<meta property="article:published_time" content="2023-05-23T09:10:25.000Z">
+<meta property="article:modified_time" content="2023-05-25T11:05:29.661Z">
 <meta property="article:author" content="MotongZ">
-<meta property="article:tag" content="不光彩的事实">
+<meta property="article:tag" content="tec">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="MotongZ&#39;s Space" type="application/atom+xml">
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-internship-thought" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-flaskenv" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2023/03/18/internship-thought/" class="article-date">
-  <time datetime="2023-03-18T14:55:18.000Z" itemprop="datePublished">2023-03-18</time>
+    <a href="/2023/05/23/flaskenv/" class="article-date">
+  <time datetime="2023-05-23T09:10:25.000Z" itemprop="datePublished">2023-05-23</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      internship_thought
+      我的第一个flask项目：部署和碰到的一些问题
     </h1>
   
 
@@ -89,21 +89,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>第一次实习结束了，从2023-2-7到2023-3-17，这一个月经历了太多事情，给我简单的人生带来了许多的变数。经历了一个月的社会实践，我大概是明白了很多道理，同时我也应该学着反思自己的行为了。就像开篇博客所说，年轻也是有相对论的。<br>选择大于努力这句b话还真不是盖的，考司马软院311点击就送，司马计院342直接寄。当然我考的确实垃圾也是事实，408真没学透，还没一些跨考仔来的高，也是让人无言以对。<br>这段时间我一直在想为什么会出路以及以后的方向到底该怎么样？我认为可能是我从来没有直接承担过责任，同时我也确实有点圣母了。众所周知人生而不平等，家境，环境，甚至遗传。没有什么是平等的，讲道理如果人都是一个模子刻出来的也不用讲什么差异性了，大伙都一个B样还讲啥？两次考研以及现在一段社会经验至少给了我狠狠一记重拳。或许早些年我还一直吐槽没发挥好，当然是我不努力还有相当重的心理包袱了。现在如果真心意识到了这些，不管去什么地方读研，不管用什么手段达成研，我都应该认认真真反思反思自己，认认真真好好考虑将来的出路，不管是为了噱头的虚无缥缈的“phd”还是切切实实的以后就业问题。都要担负起责任来了。<br>社会不由人，学生还是这个世界上最轻松的职业呀。</p>
-<!-- flag of hidden posts -->
+        <p><a target="_blank" rel="noopener" href="http://motongz.pythonanywhere.com/">项目指引</a><del>即日起30天内有效</del>  </p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>花了大约一周时间，跟着李辉老师的教程学习了flask项目，学习了一些基础的框架架构。项目详情请见<br><a target="_blank" rel="noopener" href="https://github.com/helloflask/flask-tutorial">https://github.com/helloflask/flask-tutorial</a>，理性的说，这是个很不错而且全面的项目。<br>项目学习过程中遇到了很多问题，显而易见的，这都是我python基础孱弱，并且毫无综合项目经验的缘故。<br>本文欲简单介绍一下项目过程中碰到的一些问题和解决，还有一些小小的随想罢了。</p>
+<h1 id="Knowledge"><a href="#Knowledge" class="headerlink" title="Knowledge"></a>Knowledge</h1><p>Flask：一个轻量级框架，不同于Django，Flask主打的就是一个简单轻便，无需下载过多的包和依赖，<br>自定义添加很方便，轻量级的含金量。<br>SQLAlchemy：网上给出的定义是一个强大的ORM包。基本不需要安装和依赖，import完后本地创一个.db嗯造就行了，在使用过程中也以db.session.operation为主。<br>本次项目几乎没用到太多这里的扩展，只是用一些基础功能，crud之类的。所以这个玩意的认知还是有限，以后有机会可以学习更多。<br>装饰器：python中的一个很有意思的特性，简单来说就是在不想改变内部代码的情况下给他附赠一些功能，让他执行时可以执行更多。语法糖为@标识，标准格式如下：  </p>
+<pre><code>def 装饰器(func):
+    def wrapfunction():
+        pass..
+    return warpfunction
+@装饰器
+def func(parameter a):
+    pass...     
+</code></pre>
+<p>上面首先定义装饰器函数，装饰器函数传进去函数作为参数（python特性导致它可以将函数作为参数，变量等，生猛的一），举一个简单的例子：  </p>
+<pre><code>def func():
+    pass
+a=fun
+a()#此时a()等同于执行func()
+</code></pre>
+<p>所以，装饰器传一个函数是正常操作。然后最后在这个大的函数下return内部wrap方法即可。这样的效果就是，你原本的func没有改动，但是有额外执行了一些warp中的方法。<br>这就是装饰器的特性，在本例中，大量使用了@app.route这一方法用来指引url，这是很重要的。<br>Jinjia2：一种html上的语法。  </p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://motongz.github.io/2023/03/18/internship-thought/" data-id="cli3116g9000214v8fiy80zcq" class="article-share-link">Share</a>
+      <a data-url="https://motongz.github.io/2023/05/23/flaskenv/" data-id="cli312vra00002sv812iy15ua" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tec/" rel="tag">tec</a></li></ul>
 
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2023/03/09/%E5%88%9B%E5%BB%BA%E4%B9%8B%E5%88%9D/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">创建之初</div>
+    </a>
+  
+</nav>
+
   
 </article>
 

@@ -66,6 +66,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flaskenv" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/05/23/flaskenv/" class="article-date">
+  <time datetime="2023-05-23T09:10:25.000Z" itemprop="datePublished">2023-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/23/flaskenv/">我的第一个flask项目：部署和碰到的一些问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="http://motongz.pythonanywhere.com/">项目指引</a><del>即日起30天内有效</del>  </p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>花了大约一周时间，跟着李辉老师的教程学习了flask项目，学习了一些基础的框架架构。项目详情请见<br><a target="_blank" rel="noopener" href="https://github.com/helloflask/flask-tutorial">https://github.com/helloflask/flask-tutorial</a>，理性的说，这是个很不错而且全面的项目。<br>项目学习过程中遇到了很多问题，显而易见的，这都是我python基础孱弱，并且毫无综合项目经验的缘故。<br>本文欲简单介绍一下项目过程中碰到的一些问题和解决，还有一些小小的随想罢了。</p>
+<h1 id="Knowledge"><a href="#Knowledge" class="headerlink" title="Knowledge"></a>Knowledge</h1><p>Flask：一个轻量级框架，不同于Django，Flask主打的就是一个简单轻便，无需下载过多的包和依赖，<br>自定义添加很方便，轻量级的含金量。<br>SQLAlchemy：网上给出的定义是一个强大的ORM包。基本不需要安装和依赖，import完后本地创一个.db嗯造就行了，在使用过程中也以db.session.operation为主。<br>本次项目几乎没用到太多这里的扩展，只是用一些基础功能，crud之类的。所以这个玩意的认知还是有限，以后有机会可以学习更多。<br>装饰器：python中的一个很有意思的特性，简单来说就是在不想改变内部代码的情况下给他附赠一些功能，让他执行时可以执行更多。语法糖为@标识，标准格式如下：  </p>
+<pre><code>def 装饰器(func):
+    def wrapfunction():
+        pass..
+    return warpfunction
+@装饰器
+def func(parameter a):
+    pass...     
+</code></pre>
+<p>上面首先定义装饰器函数，装饰器函数传进去函数作为参数（python特性导致它可以将函数作为参数，变量等，生猛的一），举一个简单的例子：  </p>
+<pre><code>def func():
+    pass
+a=fun
+a()#此时a()等同于执行func()
+</code></pre>
+<p>所以，装饰器传一个函数是正常操作。然后最后在这个大的函数下return内部wrap方法即可。这样的效果就是，你原本的func没有改动，但是有额外执行了一些warp中的方法。<br>这就是装饰器的特性，在本例中，大量使用了@app.route这一方法用来指引url，这是很重要的。<br>Jinjia2：一种html上的语法。  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://motongz.github.io/2023/05/23/flaskenv/" data-id="cli312vra00002sv812iy15ua" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tec/" rel="tag">tec</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-创建之初" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/03/09/%E5%88%9B%E5%BB%BA%E4%B9%8B%E5%88%9D/" class="article-date">
@@ -97,7 +153,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://motongz.github.io/2023/03/09/%E5%88%9B%E5%BB%BA%E4%B9%8B%E5%88%9D/" data-id="cli30lqwo0009uov85fct5791" class="article-share-link">Share</a>
+      <a data-url="https://motongz.github.io/2023/03/09/%E5%88%9B%E5%BB%BA%E4%B9%8B%E5%88%9D/" data-id="cli3116ge000414v8a4ticrkg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
@@ -135,7 +191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://motongz.github.io/2023/03/08/First-Blog-with-Hexo/" data-id="cli30lqw00001uov8ebqpgnqv" class="article-share-link">Share</a>
+      <a data-url="https://motongz.github.io/2023/03/08/First-Blog-with-Hexo/" data-id="cli3116g6000114v8awffgs15" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Test1/" rel="tag">Test1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Test2/" rel="tag">Test2</a></li></ul>
@@ -167,7 +223,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test1/" rel="tag">Test1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test2/" rel="tag">Test2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test1/" rel="tag">Test1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test2/" rel="tag">Test2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tec/" rel="tag">tec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E8%B0%88/" rel="tag">杂谈</a></li></ul>
     </div>
   </div>
 
@@ -177,7 +233,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Test1/" style="font-size: 10px;">Test1</a> <a href="/tags/Test2/" style="font-size: 10px;">Test2</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 10px;">杂谈</a>
+      <a href="/tags/Test1/" style="font-size: 10px;">Test1</a> <a href="/tags/Test2/" style="font-size: 10px;">Test2</a> <a href="/tags/tec/" style="font-size: 10px;">tec</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 10px;">杂谈</a>
     </div>
   </div>
 
@@ -186,7 +242,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
     </div>
   </div>
 
@@ -197,6 +253,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/05/23/flaskenv/">我的第一个flask项目：部署和碰到的一些问题</a>
+          </li>
         
           <li>
             <a href="/2023/03/09/%E5%88%9B%E5%BB%BA%E4%B9%8B%E5%88%9D/">创建之初</a>
