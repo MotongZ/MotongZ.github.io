@@ -15,7 +15,7 @@
 <meta property="og:description" content="项目指引即日起30天内有效   Summary花了大约一周时间，跟着李辉老师的教程学习了flask项目，学习了一些基础的框架架构。项目详情请见https:&#x2F;&#x2F;github.com&#x2F;helloflask&#x2F;flask-tutorial，理性的说，这是个很不错而且全面的项目。项目学习过程中遇到了很多问题，显而易见的，这都是我python基础孱弱，并且毫无综合项目经验的缘故。本文欲简单介绍一下项目过程中碰">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-23T09:10:25.000Z">
-<meta property="article:modified_time" content="2023-05-25T11:05:29.661Z">
+<meta property="article:modified_time" content="2023-05-26T16:10:28.122Z">
 <meta property="article:author" content="MotongZ">
 <meta property="article:tag" content="tec">
 <meta name="twitter:card" content="summary">
@@ -23,7 +23,7 @@
     <link rel="alternate" href="/atom.xml" title="一切的意义就是没有意义" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/favicon.ico">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -110,12 +110,32 @@ def func(parameter a):
 a=fun
 a()#此时a()等同于执行func()
 </code></pre>
-<p>所以，装饰器传一个函数是正常操作。然后最后在这个大的函数下return内部wrap方法即可。这样的效果就是，你原本的func没有改动，但是有额外执行了一些warp中的方法。<br>这就是装饰器的特性，在本例中，大量使用了@app.route这一方法用来指引url，这是很重要的。<br>Jinjia2：一种html上的语法。  </p>
+<p>所以，装饰器传一个函数是正常操作。然后最后在这个大的函数下return内部wrap方法即可。这样的效果就是，你原本的func没有改动，但是有额外执行了一些warp中的方法。<br>这就是装饰器的特性，在本例中，大量使用了@app.route这一方法用来指引url，这是很重要的。<br>Jinjia2：Jinjia2相关语法见<a target="_blank" rel="noopener" href="https://docs.jinkan.org/docs/jinja2/">Jinjia2</a><del>为什么我要用官方的链接呢？因为我感觉这博客是基于此写的，我原本写了一些语法<br>但是在生成hexo时报错了！报错了。。。告诉我缺失tag…..</del></p>
+<pre><code>#一个例子:base.html
+&#123;%block head%&#125;
+    pass...
+    &#123;%end block%&#125;
+    \\\\\\\
+    #下面是一个待插入模块
+    &#123;%bolck content%&#125;
+    &#123;%endblock%&#125;
+\\\\\
+#继承网站:extend.html
+&#123;%extends 'base.html'%&#125;
+#继承base.html。同时还会继承页脚footer部分
+pass...
+&#123;%block content%&#125;
+    pass..你自己的语句，它会自动给插进去
+    &#123;%endblock%&#125;
+</code></pre>
+<p>大概是这样的原理。</p>
+<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><p>困难主要在于工程能力比较烂，很多东西构造和搭建总是遇见不懂得东西。还好有chatgpt保我小命，很多问题直接问gpt都可以得到相当令人满意的回答。<br>整个流程大致就是看文档&amp;源码—自己稍稍改一改—最后deploy的过程，然而最后还是完全按照源代码来了，因为部署项目的部分我完全不明白<br>，从来没有部署过一个项目到互联网上，这次也算开了荒吧。通过<a target="_blank" rel="noopener" href="https://www.pythonanywhere.com/">pythonanywhere</a>来部署的python项目，他会给每个人提供1G的虚拟空间供你部署源代码<br>还有必要的静态文件。只要你创建一个web project就会给你提供一个基于pythonanywhere域名的一个url供你的代码来跑，上传完所有需要的资源后<br>，配置好所需的虚拟环境后刷新一下就可以开跑了。后端一些操作管理一般都是通过平台提供的bash命令交互来实现（如这个例子里的initdb、admin等操作都是通过bash来的）<br>由于我完全参照的教程，所以我还按照教程的需求进行代码管理和一定量的重构，原本统统集合在一个app.py下跑，后面根据具体操作不同把他们都分散<br>到了不同逻辑的.py下。简短的一个项目包含了很多，从框架的教程，再到用到的一些语法，项目管理，项目部署，一些资源的利用收集，都让我感觉到了具体而切实的进步<br>，这些东西应该是一个科班出身的学生必不可少的，但我却不具备那样的素养，只能为过去消逝的时光感到遗憾了。    </p>
+<h1 id="最后…"><a href="#最后…" class="headerlink" title="最后…"></a>最后…</h1><p>这是我第一篇博客记录，如你所见写的很烂，没有思路的苍蝇一般想到什么写什么，完全不具备那种从业人员该具备的严谨和强结构性。所以如果这篇文章让你觉得<br>很烂，请别喷我，关掉就是了。希望我以后能记录一些更好的project和更有意义的（贴近现实）的技术和项目。IT精神不仅仅是开源，还应该是一种坚持不懈学习的精神，<br>不应该因为时代在发展变化就拒绝变化，不适应新时代潮流的人只能留在旧时代顾影自怜吧。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://motongz.github.io/2023/05/23/flaskenv/" data-id="cli39nhpn0004mgv80jea7a9e" class="article-share-link">Share</a>
+      <a data-url="https://motongz.github.io/2023/05/23/flaskenv/" data-id="cli4rf15c0002w8v88yhdapek" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tec/" rel="tag">tec</a></li></ul>
