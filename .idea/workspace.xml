@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5d5e9078-ce96-4e81-92d6-6a10d82791b0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.deploy_git" />
+  </component>
+  <component name="ProjectId" id="2QI1hHebf2fD9Y2k7ddcskuAXJl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d5e9078-ce96-4e81-92d6-6a10d82791b0" name="Default Changelist" comment="" />
+      <created>1685026398130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685026398130</updated>
+      <workItem from="1685026416700" duration="1840000" />
+      <workItem from="1685115352539" duration="2107000" />
+      <workItem from="1685153060455" duration="2930000" />
+      <workItem from="1685170057611" duration="4400000" />
+      <workItem from="1685284436032" duration="149000" />
+      <workItem from="1685284608213" duration="3280000" />
+      <workItem from="1685287945076" duration="133000" />
+      <workItem from="1685322013657" duration="1218000" />
+      <workItem from="1685408597031" duration="509000" />
+      <workItem from="1685581917812" duration="2798000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="980" y="528" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1685287632705">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="980" y="528" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1685287632705" />
+    <state x="740" y="298" key="FileChooserDialogImpl" timestamp="1685409116743">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="298" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1685409116743" />
+    <state x="783" y="365" key="SettingsEditor" timestamp="1685288037456">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="783" y="365" key="SettingsEditor/-1920.0.1536.864/0.0.2560.1440@0.0.2560.1440" timestamp="1685173393290" />
+    <state x="783" y="365" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1685288037456" />
+    <state x="729" y="410" key="com.intellij.ide.util.TipDialog" timestamp="1685408596776">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="972" y="547" key="com.intellij.ide.util.TipDialog/-1920.0.1536.864/0.0.2560.1440@0.0.2560.1440" timestamp="1685170056784" />
+    <state x="729" y="410" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1685408596776" />
+    <state x="972" y="547" key="com.intellij.ide.util.TipDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1685287946153" />
+    <state x="1074" y="638" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1685027093829">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1074" y="638" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.864/0.0.2560.1440@0.0.2560.1440" timestamp="1685027093829" />
+  </component>
+</project>
