@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>一次问题解决：我的Hexo多设备部署同步以及思考</title>
+    <link href="/2025/04/22/test/"/>
+    <url>/2025/04/22/test/</url>
+    
+    <content type="html"><![CDATA[<h3 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h3><p>由于暑期实习频繁出现个人主页，想起前年创建的基于Hexo的博客，遂复活之。顺便作为一个日常记录的平台，记载一些我的思考与感悟：包括但不限于技术类博客（语言特性，计算机基础，框架学习）、生活中琐事带来的启发与感悟、哲学类思考与观后感、重大事件赛博记录。</p><h3 id="具体需求"><a href="#具体需求" class="headerlink" title="具体需求"></a>具体需求</h3><p>宿舍有台式机 $\times$ 1，实验室有主机 $\times$ 1，还有一台替代ThinkPad，月初购入的MacBookAir M4 $\times$ 1，想要不同时候遇到有价值的东西能在不同设备及时记录。虽然在某设备创建.md文档后时候统一copy到台式机再通过台式机发布是一种解法，但显然不如多平台间合理同步。</p><h3 id="问题所需知识"><a href="#问题所需知识" class="headerlink" title="问题所需知识"></a>问题所需知识</h3><p><a href="https://hexo.io/zh-cn/">hexo</a> 作为一个老牌，被很多前端所熟知的成熟框架，是我搭建博客的框架选择。</p><p><a href="https://github.com/">git</a>不用多说，版本控制，代码拉取，仓库管理。<strong>是方案解决的关键。</strong></p><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ul><li>默认你已经在不同设备上有了 git，且创建了ssh key，且你的终端可以访问github，作为你的账户。你可以通过下面方法测试：</li></ul><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html">ssh -T git@github.com<br></code></pre></td></tr></table></figure><p>如果正确返回你的username，说明这一步没问题。</p><ul><li>要求你部署过hexo博客，且托管在你的github.io主页。可以通过访问的<a href="https://username.github.io来访问渲染好的静态页面./">https://username.github.io来访问渲染好的静态页面。</a>如果没有，参见<a href="https://hexo.io/zh-cn/">hexo官方文档</a> 进行本地部署。</li></ul><p>以上前置条件满足后，便可操作。<del>我的方案并不具备唯一性，也是参考了别人的方案，可自行搜索hexo设备同步等关键字</del></p><p>先讲讲原理：</p><p>git仓库中，是渲染好的静态页面。对于整个hexo文档，我们实际可以分为两部分：</p><ul><li>渲染好的静态页面供他人观看；</li><li>博客源资源代码。</li></ul><p>如果你部署过hexo博客，在该文件夹下你会看到类似如下的结构，这就是你的资源代码：</p><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs gradle">$ ls -a<br> .<span class="hljs-regexp">/             .github/</span>     _config.fluid.yml       db.json         <span class="hljs-keyword">package</span>-lock.json   themes/<br> ..<span class="hljs-regexp">/            .gitignore   _config.landscape.yml   desktop.ini     public/</span><br> .deploy_git<span class="hljs-regexp">/   .idea/</span>       _config.yml             node_modules<span class="hljs-regexp">/   scaffolds/</span><br> .git<span class="hljs-regexp">/          .npmignore  &#x27;Command Prompt.lnk&#x27;*    package.json    source/</span><br></code></pre></td></tr></table></figure><p>关键的是 _config.yml。config决定了你的部署问题，包括部署到哪个git仓库的哪个分支？采用什么样的格式？有没有用诸如fluid的模板等等。</p><p>所以，我们想实现多设备同步，我们主要靠git的版本控制，让我们可以把资源代码通过git托管，在不同设备间拉取，然后更新资源后通过git实现云端同步。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>tec</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>归来记</title>
+    <link href="/2025/04/21/%E5%BD%92%E6%9D%A5%E8%AE%B0/"/>
+    <url>/2025/04/21/%E5%BD%92%E6%9D%A5%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<p>时隔两年，我又复活了我的博客。这个当初因为兴趣在家搞得博客，随着最近找暑期实习的情况，我把它复活了，某种程度上来说有点讽刺，因为是不是这说明没有暑期实习，它就会被我一直遗忘下去？</p><p>犹记起当初创建了解Hexo博客，还是我看到<a href="https://youngforest.github.io/">YoungForest</a>的博客，当时给尚处在一个“高中生”心态的我极大的震惊。看着他的成长历程，从山西的一个小镇，考到buaa，在学校的过程中不断探索，最后靠自己的努力移民爱尔兰，他的过程和成长在前期被以极高的频率记录在博客上，这是我第一次见证真实的读书改变命运，让我赞叹不已，同时又心生羡慕，或许是因为我在他的年纪远没有取得他的成就，或许是我看见别人更强激起了我的好胜心——但我又明白，现在的每分每秒已经成结果，我永远没办法回到过去再来了，而感到失望吧。</p><p>但有时候会想起王勃在滕王阁序中所言，“君子见机，达人知命”。别人能取得成就，别人也必然在背后付出了很多，在取得成就前吃了你想不到的苦和付出。因此审视我的过去，我也承认确实不足吧。又想起本科时隔壁寝有个来自甘肃的哥们，他的个性签名我总常看常新：种下一棵树最好的时间是十年前，其次是现在。每次想到这句话，我都会有些不一样的感觉。我们没法要求10岁的自己有30岁的心智和眼界，就像我们会困在现在这个名为懊悔的牢笼一样。我们需要的事情是接纳过去，然后笑着往前。</p><p>不管遇到什么问题，遇到什么痛苦，遇到什么苦难，都是一笔财富。就像那首歌一样：</p><h2 id="What-doesn’t-kill-u-make-u-stronger"><a href="#What-doesn’t-kill-u-make-u-stronger" class="headerlink" title="What doesn’t kill u make u stronger."></a>What doesn’t kill u make u stronger.</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>daily</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>路由器方案记录</title>
+    <link href="/2023/06/15/route/"/>
+    <url>/2023/06/15/route/</url>
+    
+    <content type="html"><![CDATA[<p>本篇文章用于记录关于路由器的重新配置和组网流程。恰逢618，对吧？</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>-tec</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>消费与思考</title>
+    <link href="/2023/05/28/%E6%B6%88%E8%B4%B9%E4%B8%8E%E6%80%9D%E8%80%83/"/>
+    <url>/2023/05/28/%E6%B6%88%E8%B4%B9%E4%B8%8E%E6%80%9D%E8%80%83/</url>
+    
+    <content type="html"><![CDATA[<p>2023-6-1更新<br>真好，还是买了一台主机，买这台主机考虑各种配置大概花了我10h左右的空闲时间吧。不过考虑到我是diy一点经验没有，所以花一点时间做参考学习也是有益的，最次最次我也学习了很多硬件知识和相关的参数，有人说diy精神本质就是折腾精神，我觉得还蛮对的，折腾就完事辣！<br>简单贴一下我的配置吧，所有所有都是基于618活动的价格，所以或许会有共计5-10%的浮动值，做个记录，仅供参考。  </p><table><thead><tr><th align="center">硬件</th><th align="center">品牌</th><th align="center">购买平台</th><th align="center">价格</th></tr></thead><tbody><tr><td align="center">cpu</td><td align="center">Interl i5-12490f</td><td align="center">jd</td><td align="center">见主板</td></tr><tr><td align="center">显卡</td><td align="center">七彩虹 3060Ultra W OC 12G</td><td align="center">jd</td><td align="center">2238</td></tr><tr><td align="center">主板</td><td align="center">微星 B660M迫击炮MAX DDR4 WIFI</td><td align="center">jd</td><td align="center">2091</td></tr><tr><td align="center">固态</td><td align="center">西部数据 SN570 2T</td><td align="center">jd</td><td align="center">647</td></tr><tr><td align="center">内存</td><td align="center">金百达 银爵3200 DDR4 16x2</td><td align="center">jd</td><td align="center">367</td></tr><tr><td align="center">散热</td><td align="center">乔思伯 CR-1400EVO</td><td align="center">jd</td><td align="center">79</td></tr><tr><td align="center">电源</td><td align="center">微星 A650BN铜</td><td align="center">pdd</td><td align="center">260</td></tr><tr><td align="center">机箱</td><td align="center">先马 颜之神mini</td><td align="center">jd</td><td align="center">198</td></tr><tr><td align="center">键盘</td><td align="center">ikbc 红轴高达配色</td><td align="center">jd</td><td align="center">349</td></tr><tr><td align="center">鼠标</td><td align="center">gpw+贴纸</td><td align="center">jd</td><td align="center">349</td></tr><tr><td align="center">屏幕</td><td align="center">优派 VX2758VKPRO</td><td align="center">jd</td><td align="center">979</td></tr><tr><td align="center">共计</td><td align="center"></td><td align="center"></td><td align="center">7558</td></tr></tbody></table><p>有些配件是提前买到的，并不是618当日买的，所以价格比当天高属于正常情况。总的下来花了我7.6k，然而有些部分显然不能这么算，比如显示器就算我没有这个主机我还是会拿他外接我的thinkpad；键盘我肯定要买不然只能抱着可爱的笔记本键盘用；鼠标也是同理。<br>这个配置如果有什么惋惜<del>伏笔</del>的地方可能在于：  </p><ol><li>显卡性价比不算特别高。我当然知道3060ti理论上是我的游戏最优解，然而8G的显存我十分担心成为一个瓶颈。慢但能用和快但也许有限制我觉得应该选前者，何况我真不是什么抽象的画面党，玩游戏本来就不是特别有所谓</li><li>板子+cpu的组合。jd的这个店铺i5 12400f和i5 12490组合居然一个价格（可能区别在于送的一些配件，什么原装风扇之类的），但性能好像12490无论如何略压一头，既然价格一样就没啥说的了。</li><li>jd平台可能不是最便宜的。但严格来讲这不算伏笔，第一次diy，还都是硬件（以我们家的性格用几年也不奇怪），我实在不想有什么不好的售后体验，省事&gt;&gt;&gt;&gt;一定幅度的便宜，我个人认为2000以内的浮动不超过100，再高不超过10%都是我可以接受的范围。</li><li>这个过程有点优柔寡断，磨磨蹭蹭。最好能够果断点，时间也是很贵的。<br>也许diy完后会更一次，目前就先这样了。</li></ol><hr><p>最近不是大名鼎鼎的618time吗，恰逢研究生待入学+自身硬件配置确实不太好（2017年的thinkpad5000块钱本子），所以动了花钱自己搭建主机的念头——————考虑到我大学期间想打游戏基本都死在配置关上…可能这是某种想弥补过去没能畅快的打游戏的遗憾吧，毕竟我买的R6，DBD的时间都是在网吧打出来的。。。。。<br>除非你完全不在乎性价比<del>砸钱就完事了</del>，看配置实际上又是一个很折磨人的事——————虽然贴吧、bilibili各种推荐视频帖子层出不穷，但你是不太可能看到一个配置就无脑冲刺的，你肯定还会不停看看看，或想选择一些自己有所耳闻的牌子，或者对他的推荐不完全放心，或者想追求机制的性价比…各种各样的信息哪怕你完全以走马观花形式观看都足以撑爆你的可爱小脑袋，更不用说下面评论区经常大家评价xx不如xx，这个性价比实际上不如xx…这样下来真的很折磨人的精神。所以对于有着优良三分钟热度传统的我来说，我立马就打退堂鼓想润了，还研究个鸡儿，到时候抄一套还算说得过去的就完事了。<br>问题没有那么简单，在显卡的选择上又开始复杂起来了————N卡由于高贵的cuda毫无疑问对于AI从业者是不可替代的，A卡哪怕性价比如何如何，风扇如何如何，功耗如何如何，但是在实际生产力这种原则问题上是很难让步的。基于此又开始了基于显存的新一轮挑选：大家都说好的小白入门3060 12G？显存劣势但flops和带宽爆炒的3060ti？多花点钱整高端的40系列？还是再花点时间精力整个24G显存的3090矿卡？看测评看来看去，大火比来比去，看的人真是头都要晕了。你可能会说有多少钱办多大事，但是你在DIY的话，不追求性价比不比来比去是不可能的——————否则你为什么不直接去买人整好的系列整机呢？然后大数据又开始十分智能的给你推荐相关信息，关于前段时间的矿热到矿难，再关于自己搭配dl机器意义大小与否，甚至开始推荐你装机视频…就像蜘蛛网一般，从中心的那个点出发，神奇的推送，永无止境。<br>突然一下子，欲望如潮水般褪去了。想起之前问老师说的实验室硬件资源充足（虽然不知道是不是画饼），再想到这段时间对电子游戏的态度，突然感觉配一台机子也没那么重要。我手头上的钱毫无疑问是够我配一台主机的，可是，我为什么要去配他？是为了搞cv？好像动机有点不纯，而且自己搭个机子跑模型有点不太行，性能除非出点血不然只能说堪堪入门，而且我好像就现在的知识水平没有那么多模型等我去跑；是为了玩很多没玩上遗憾的游戏？有一点，但我对游戏现在不知道怎得没有那么有兴趣了，最近玩暗黑地牢和文明5得日子也挺有意思得（虽然还是不太会打冠军本）。先进的科技总是给人幸福感，同时也极大提升生产力，这是毋庸置疑得。我人生中买的第一块键盘和2k屏幕现在给我带来了完全不一样的感受（甚至上周才买的），让我码字看东西玩游戏都有了全新的体验。但是看着显卡的价位，思索我得需求，甚至看着周围逐渐不对劲得风气，这让我有点恐慌。现在世界的经济下行是毫无疑问的，需要经济活力得注入来刺激经济以求回暖，客观现实得残酷和寒冬愈演愈烈。得益于互联网，我们总是能看到为了生计奔波得普通人，展示着生活的艰辛不易；也能看到不差钱的富哥，各种餐厅娱乐场所换着来整。这种巨大的割裂感让我觉得万分不真实，一种低智得风气好像在社会蔓延，无论是内部生活，还是对外态度，还是人民意志，都开始让人捉摸不定。<br>显卡乃至游戏，你说他是高端娱乐吧，肯定是算不上，但他也绝对不便宜。问题是有多少人能够看清自己的需求和基础选择自己合适的而非溢价乃至越阶的？我不好说，花1w配一台机子然后基本没有用到他的性能甚至一般水平不算少见。洋洋洒洒说了这么多，现在这种盲从不假思索地浮躁风气让我感到害怕，短视频为主的网络快餐大行其道更是在一步步蚕食人们的自主能力。好吧，我反正不是一个乐观主义者。至少我得挂laddder这件事情就不容许我是一个乐观主义者。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>daily</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我的第一个flask项目：部署和碰到的一些问题</title>
+    <link href="/2023/05/23/flaskenv/"/>
+    <url>/2023/05/23/flaskenv/</url>
+    
+    <content type="html"><![CDATA[<p><a href="http://motongz.pythonanywhere.com/">项目指引</a><del>即日起30天内有效</del>  </p><h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>花了大约一周时间，跟着李辉老师的教程学习了flask项目，学习了一些基础的框架架构。项目详情请见<a href="https://github.com/helloflask/flask-tutorial">https://github.com/helloflask/flask-tutorial</a>，理性的说，这是个很不错而且全面的项目。项目学习过程中遇到了很多问题，显而易见的，这都是我python基础孱弱，并且毫无综合项目经验的缘故。<br>本文欲简单介绍一下项目过程中碰到的一些问题和解决，还有一些小小的随想罢了。</p><h1 id="Knowledge"><a href="#Knowledge" class="headerlink" title="Knowledge"></a>Knowledge</h1><p>Flask：一个轻量级框架，不同于Django，Flask主打的就是一个简单轻便，无需下载过多的包和依赖，自定义添加很方便，轻量级的含金量。<br>SQLAlchemy：网上给出的定义是一个强大的ORM包。基本不需要安装和依赖，import完后本地创一个.db嗯造就行了，在使用过程中也以db.session.operation为主。<br>本次项目几乎没用到太多这里的扩展，只是用一些基础功能，crud之类的。所以这个玩意的认知还是有限，以后有机会可以学习更多。<br>装饰器：python中的一个很有意思的特性，简单来说就是在不想改变内部代码的情况下给他附赠一些功能，让他执行时可以执行更多。语法糖为@标识，标准格式如下：  </p><pre><code class="hljs">def 装饰器(func):    def wrapfunction():        pass..    return warpfunction@装饰器def func(parameter a):    pass...     </code></pre><p>上面首先定义装饰器函数，装饰器函数传进去函数作为参数（python特性导致它可以将函数作为参数，变量等，生猛的一），举一个简单的例子：  </p><pre><code class="hljs">def func():    passa=funa()#此时a()等同于执行func()</code></pre><p>所以，装饰器传一个函数是正常操作。然后最后在这个大的函数下return内部wrap方法即可。这样的效果就是，你原本的func没有改动，但是有额外执行了一些warp中的方法。这就是装饰器的特性，在本例中，大量使用了@app.route这一方法用来指引url，这是很重要的。<br>Jinjia2：Jinjia2相关语法见<a href="https://docs.jinkan.org/docs/jinja2/">Jinjia2</a><del>为什么我要用官方的链接呢？因为我感觉这博客是基于此写的，我原本写了一些语法但是在生成hexo时报错了！报错了。。。告诉我缺失tag…..</del></p><pre><code class="hljs">#一个例子:base.html&#123;%block head%&#125;    pass...    &#123;%end block%&#125;    \\\\\\\    #下面是一个待插入模块    &#123;%bolck content%&#125;    &#123;%endblock%&#125;\\\\\#继承网站:extend.html&#123;%extends 'base.html'%&#125;#继承base.html。同时还会继承页脚footer部分pass...&#123;%block content%&#125;    pass..你自己的语句，它会自动给插进去    &#123;%endblock%&#125;</code></pre><p>大概是这样的原理。</p><h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><p>困难主要在于工程能力比较烂，很多东西构造和搭建总是遇见不懂得东西。还好有chatgpt保我小命，很多问题直接问gpt都可以得到相当令人满意的回答。整个流程大致就是看文档&amp;源码—自己稍稍改一改—最后deploy的过程，然而最后还是完全按照源代码来了，因为部署项目的部分我完全不明白，从来没有部署过一个，配置好所需的虚拟环境后刷新一下就可以开跑了。后端一些操作管理一般都是通过平台提供的bash命令交互来实现（如这个例子里的initdb、admin等操作都是通过bash来的）。<br>由于我完全参照的教程，所以我还按照教程的需求进行代码管理和一定量的重构，原本统统集合在一个app.py下跑，后面根据具体操作不同把他们都分散到了不同逻辑的.py下。简短的一个项目包含了很多，从框架的教程，再到用到的一些语法，项目管理，项目部署，一些资源的利用收集，都让我感觉到了具体而切实的进步，这些东西应该是一个科班出身的学生必不可少的，但我却不具备那样的素养，只能为过去消逝的时光感到遗憾了。   </p><h1 id="最后…"><a href="#最后…" class="headerlink" title="最后…"></a>最后…</h1><p>这是我第一篇博客记录，如你所见写的很烂，没有思路的苍蝇一般想到什么写什么，完全不具备那种从业人员该具备的严谨和强结构性。所以如果这篇文章让你觉得很烂，请别喷我，关掉就是了。希望我以后能记录一些更好的project和更有意义的（贴近现实）的技术和项目。IT精神不仅仅是开源，还应该是一种坚持不懈学习的精神，不应该因为时代在发展变化就拒绝变化，不适应新时代潮流的人只能留在旧时代顾影自怜吧。  </p><h1 id="顺便说一点"><a href="#顺便说一点" class="headerlink" title="顺便说一点"></a>顺便说一点</h1><p><a href="https://github.com/iissnan/hexo-theme-next/issues/1672">https://github.com/iissnan/hexo-theme-next/issues/1672</a> 关于回车在本地渲染不换行，但上传换行的解释。最根源的问题是mark中的gfm选项。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>tec</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
