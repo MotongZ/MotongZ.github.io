@@ -16,22 +16,22 @@
   <meta name="author" content="MotongZ">
   <meta name="keywords" content="">
   
-    <meta name="description" content="问题背景由于暑期实习频繁出现个人主页，想起前年创建的基于Hexo的博客，遂复活之。顺便作为一个日常记录的平台，记载一些我的思考与感悟：包括但不限于技术类博客（语言特性，计算机基础，框架学习）、生活中琐事带来的启发与感悟、哲学类思考与观后感、重大事件赛博记录。 具体需求宿舍有台式机 $\times$ 1，实验室有主机 $\times$ 1，还有一台替代ThinkPad，月初购入的MacBookAir">
+    <meta name="description" content="4.28日 腾讯 CSIG云1面凉经 自我介绍  项目拷打： 项目结构？你的结构是什么？为什么是这样的结构？并给出某个场景下的情况，假设这个场景下会发生什么。 假设有一个http请求要读取你的某些资源，这个过程中会发生什么？详细讲讲（有多细讲多细，如果你可以讲具体代码更好，如果能讲出背后的系统调用那更好）  八股： C++ malloc&amp;free vs new&amp;delete； st">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一次问题解决：我的Hexo多设备部署同步以及思考">
-<meta property="og:url" content="https://motongz.github.io/2025/04/22/test/index.html">
+<meta property="og:title" content="凉经">
+<meta property="og:url" content="https://motongz.github.io/2025/04/28/%E8%85%BE%E8%AE%AFCSIG-%E5%87%89%E7%BB%8F/index.html">
 <meta property="og:site_name" content="一切的意义就是没有意义">
-<meta property="og:description" content="问题背景由于暑期实习频繁出现个人主页，想起前年创建的基于Hexo的博客，遂复活之。顺便作为一个日常记录的平台，记载一些我的思考与感悟：包括但不限于技术类博客（语言特性，计算机基础，框架学习）、生活中琐事带来的启发与感悟、哲学类思考与观后感、重大事件赛博记录。 具体需求宿舍有台式机 $\times$ 1，实验室有主机 $\times$ 1，还有一台替代ThinkPad，月初购入的MacBookAir">
+<meta property="og:description" content="4.28日 腾讯 CSIG云1面凉经 自我介绍  项目拷打： 项目结构？你的结构是什么？为什么是这样的结构？并给出某个场景下的情况，假设这个场景下会发生什么。 假设有一个http请求要读取你的某些资源，这个过程中会发生什么？详细讲讲（有多细讲多细，如果你可以讲具体代码更好，如果能讲出背后的系统调用那更好）  八股： C++ malloc&amp;free vs new&amp;delete； st">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-22T05:36:47.000Z">
-<meta property="article:modified_time" content="2025-04-24T12:42:22.708Z">
+<meta property="article:published_time" content="2025-04-28T11:43:29.000Z">
+<meta property="article:modified_time" content="2025-04-28T12:03:08.510Z">
 <meta property="article:author" content="MotongZ">
-<meta property="article:tag" content="tec">
+<meta property="article:tag" content="interview">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>一次问题解决：我的Hexo多设备部署同步以及思考 - 一切的意义就是没有意义</title>
+  <title>凉经 - 一切的意义就是没有意义</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -212,7 +212,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="一次问题解决：我的Hexo多设备部署同步以及思考"></span>
+            <span id="subtitle" data-typed-text="55555"></span>
           
         </div>
 
@@ -223,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-22 13:36" pubdate>
-          2025年4月22日 下午
+        <time datetime="2025-04-28 19:43" pubdate>
+          2025年4月28日 晚上
         </time>
       </span>
     
@@ -284,38 +284,39 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">一次问题解决：我的Hexo多设备部署同步以及思考</h1>
+            <h1 style="display: none">55555</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h3><p>由于暑期实习频繁出现个人主页，想起前年创建的基于Hexo的博客，遂复活之。顺便作为一个日常记录的平台，记载一些我的思考与感悟：包括但不限于技术类博客（语言特性，计算机基础，框架学习）、生活中琐事带来的启发与感悟、哲学类思考与观后感、重大事件赛博记录。</p>
-<h3 id="具体需求"><a href="#具体需求" class="headerlink" title="具体需求"></a>具体需求</h3><p>宿舍有台式机 $\times$ 1，实验室有主机 $\times$ 1，还有一台替代ThinkPad，月初购入的MacBookAir M4 $\times$ 1，想要不同时候遇到有价值的东西能在不同设备及时记录。虽然在某设备创建.md文档后时候统一copy到台式机再通过台式机发布是一种解法，但显然不如多平台间合理同步。</p>
-<h3 id="问题所需知识"><a href="#问题所需知识" class="headerlink" title="问题所需知识"></a>问题所需知识</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo</a> 作为一个老牌，被很多前端所熟知的成熟框架，是我搭建博客的框架选择。</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/">git</a>不用多说，版本控制，代码拉取，仓库管理。<strong>是方案解决的关键。</strong></p>
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ul>
-<li>默认你已经在不同设备上有了 git，且创建了ssh key，且你的终端可以访问github，作为你的账户。你可以通过下面方法测试：</li>
+                <h3 id="4-28日-腾讯-CSIG云1面凉经"><a href="#4-28日-腾讯-CSIG云1面凉经" class="headerlink" title="4.28日 腾讯 CSIG云1面凉经"></a>4.28日 腾讯 CSIG云1面凉经</h3><ul>
+<li><p>自我介绍</p>
+</li>
+<li><p>项目拷打：
+项目结构？你的结构是什么？为什么是这样的结构？并给出某个场景下的情况，假设这个场景下会发生什么。
+假设有一个http请求要读取你的某些资源，这个过程中会发生什么？详细讲讲（有多细讲多细，如果你可以讲具体代码更好，如果能讲出背后的系统调用那更好）</p>
+</li>
+<li><p>八股：
+C++
+malloc&amp;free vs new&amp;delete；
+static关键字；
+vector和list的区别？
+vector的emplaceback和pushback的区别？
+unordered_map的底层结构？</p>
+<p>操作系统
+了解Linux吗？
+讲讲epoll？
+讲讲Linux中
+一个进程的地址映射？（在问虚拟地址，一个进程的虚拟地址可以有多少？我回答假设某IDE内 给一个进程分配4G，则地址是0～4G的映射。我感觉在问虚拟地址映射的问题）</p>
+</li>
+<li><p>代码：
+1.用C++实现文件读取然后用标准流输出
+2.自己写一个 vector，要求实现pushback&amp;emplaceback。一开始我用template写的不好，后面他说可以假设数据都是特定的struct node{int x,int y};</p>
+</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html">ssh -T git@github.com<br></code></pre></td></tr></table></figure>
-
-<p>如果正确返回你的username，说明这一步没问题。</p>
-<ul>
-<li>要求你部署过hexo博客，且托管在你的github.io主页。
-可以通过访问的<a target="_blank" rel="noopener" href="https://username.github.io来访问渲染好的静态页面./">https://username.github.io来访问渲染好的静态页面。</a>
-如果没有，参见<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">hexo官方文档</a> 进行本地部署。</li>
-</ul>
-<p>以上前置条件满足后，便可操作。<del>我的方案并不具备唯一性，也是参考了别人的方案，可自行搜索hexo设备同步等关键字</del></p>
-<p>先讲讲原理：</p>
-<p>git仓库中，是渲染好的静态页面。对于整个hexo文档，我们实际可以分为两部分：</p>
-<ul>
-<li>渲染好的静态页面供他人观看；</li>
-<li>博客源资源代码。</li>
-</ul>
-<p>如果你部署过hexo博客，在该文件夹下你会看到类似如下的结构，这就是你的资源代码：</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs gradle">$ ls -a<br> .<span class="hljs-regexp">/             .github/</span>     _config.fluid.yml       db.json         <span class="hljs-keyword">package</span>-lock.json   themes/<br> ..<span class="hljs-regexp">/            .gitignore   _config.landscape.yml   desktop.ini     public/</span><br> .deploy_git<span class="hljs-regexp">/   .idea/</span>       _config.yml             node_modules<span class="hljs-regexp">/   scaffolds/</span><br> .git<span class="hljs-regexp">/          .npmignore  &#x27;Command Prompt.lnk&#x27;*    package.json    source/</span><br></code></pre></td></tr></table></figure>
-
-<p>关键的是 _config.yml。config决定了你的部署问题，包括部署到哪个git仓库的哪个分支？采用什么样的格式？有没有用诸如fluid的模板等等。</p>
-<p>所以，我们想实现多设备同步，我们主要靠git的版本控制，让我们可以把资源代码通过git托管，在不同设备间拉取，然后更新资源后通过git实现云端同步。</p>
+<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><p>感觉面试官一度怀疑我写没写过C++了，尤其是问我输入输出流的时候，告诉我有一个文件，问我怎么读取。我还想是在问什么策略吗，同步异步IO乱七八糟的，结果就是问我怎么读，然后有点无语的问我你没用过iostream吗。我听完我也有点懵逼了，不是怎么问的是这个啊，我没想到啊。。。后面答了一些八股算是又好了一点，觉得可能就算没写过至少也背过吧（笑），然后问我用过什么stl，我就随口说了几个常用的数据结构，一说vector立马问到pushback和emplaceback，然后让我实现。不是我以为手撕应该是写什么算法之类的吧，或者智能指针之类的呢，又一下给我整不会了。。。</p>
+<p>但是面试官肯定是个好人，说话语气和很好，还会引导我，比如我malloc&amp;new哪里我忘了说delete会析构对象，他就说那为什么不都用malloc呢？我一下就想到哦对象构造和析构这一块了，马上给他补上了，能明显感觉到他觉得这个get到了。。。</p>
+<p>最大的问题还是我太菜了，项目准备的不足，不过鉴于是昨天突然邀请，而这两天我又得知了会议录用要准备格式和注册的事情，虽然是个水会。好吧我越说越再给自己找补，就是太菜了。。。。。。。。一问的不是传统的面经就有点反应不过来，另一方面可以说我有点路径依赖了，对变化措手不及，而且他这种扣细节的方式我也一下没跟上，被挂倒不意外。我应该更重视一些基础，更加回顾回顾一些实际点的东西= =</p>
 
                 
               </div>
@@ -328,7 +329,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/tec/">#tec</a>
+        <a href="/tags/interview/">#interview</a>
       
     </div>
   
@@ -340,8 +341,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>一次问题解决：我的Hexo多设备部署同步以及思考</div>
-      <div>https://motongz.github.io/2025/04/22/test/</div>
+      <div>凉经</div>
+      <div>https://motongz.github.io/2025/04/28/腾讯CSIG-凉经/</div>
     </div>
     <div class="license-meta">
       
@@ -353,7 +354,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月22日</div>
+          <div>2025年4月28日</div>
         </div>
       
       
@@ -385,18 +386,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/28/%E8%85%BE%E8%AE%AFCSIG-%E5%87%89%E7%BB%8F/" title="凉经">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">凉经</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/21/%E5%BD%92%E6%9D%A5%E8%AE%B0/" title="归来记">
-                        <span class="hidden-mobile">归来记</span>
+                      <a href="/2025/04/22/test/" title="一次问题解决：我的Hexo多设备部署同步以及思考">
+                        <span class="hidden-mobile">一次问题解决：我的Hexo多设备部署同步以及思考</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
